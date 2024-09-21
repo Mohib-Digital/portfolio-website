@@ -13,9 +13,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   background-color: #939494;
-}
+} */
 
 a {
   text-decoration: none;
@@ -682,6 +682,10 @@ p {
 }
 
 #contact .contact-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -689,7 +693,7 @@ p {
   width: 80%;
   text-align: center;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   margin: 30px;
   display: flex;
   justify-content: center;
