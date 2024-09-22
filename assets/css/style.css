@@ -1,5 +1,14 @@
 /* Globel Section */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+  font-family: myFont;
+  src: url(../fonts/static/Montserrat-SemiBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: myFont2;
+  src: url(../fonts/static/Montserrat-MediumItalic.ttf);
+}
 
 * {
   margin: 0;
@@ -13,9 +22,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  background-color: #939494;
-} */
+body {
+  background-color: #414040;
+}
 
 a {
   text-decoration: none;
@@ -47,7 +56,7 @@ p {
 .section-title {
   font-size: 4rem;
   font-weight: 300;
-  color: #000;
+  color: #fff;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -404,13 +413,20 @@ p {
   margin: 0 auto;
 }
 
+#services .service-top p {
+  font-size: 1.6rem;
+  font-family: myFont;
+  padding: 30px;
+  color: #fff;
+}
+
 #services .service-bottom {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 50px;
 }
+
 
 #services .service-bottom .icon {
   height: 80px;
@@ -419,34 +435,44 @@ p {
 }
 
 #services .service-item h2 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
   text-transform: uppercase;
+  text-align: left;
   color: #fff;
 }
 
 #services .service-item p {
   text-align: left;
   color: #fff;
+  font-family: myFont2;
 }
 
 #services .service-item {
   flex-basis: 80%;
+  height: 350px;
+  background-color: #6e6b6b;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   padding: 30px;
   border-radius: 10px;
-  margin: 10px   5%;
+  margin: 10px 5%;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  box-shadow: 0px 0px 5px 2.5px #ffffff;
+  transition: 0.3s ease box-shadow;
 }
 
-#services .service-item::after {
+#services .service-item:hover {
+  box-shadow: 0px 0px 5px 0 #dad1d1;
+}
+
+/* #services .service-item::after {
   content: '';
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-image: linear-gradient(60deg, #6e6b6b 0%, #6e6b6b 100%);
   position: absolute;
   left: 0;
   top: 0;
@@ -454,7 +480,7 @@ p {
   width: 100%;
   opacity: 0.9;
   z-index: -1;
-}
+} */
 
 @media only screen and (min-width: 768px) {
   #services .service-bottom .service-item {
@@ -583,16 +609,19 @@ p {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 #about .col-left {
   width: 250px;
   height: 360px;
+  
 }
 
 
 #about .col-right {
   width: 100%;
+  
 }
 
 #about .col-right h2 {
@@ -600,17 +629,25 @@ p {
   font-weight: 500;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
+  color: #fff;
+  font-family: myFont2;
+  text-align: center;
 }
 
 #about .col-right p {
   margin-bottom: 20px;
+  color: #fff;
+  font-family: myFont2;
+  text-align: justify;
+  
 }
 
 #about .col-right .cta {
-  color: #000;
+  color: #fff;
   margin-bottom: 50px;
   padding: 10px 20px;
   font-size: 2rem;
+  
 }
 
 #about .col-left .about-img {
@@ -669,6 +706,9 @@ p {
     text-align: left;
   }
 
+  #about .col-right h2 {
+    text-align: left;
+  }
 
 }
 
@@ -676,6 +716,7 @@ p {
 /* contact section */
 #contact .contact {
   flex-direction: column;
+  gap: 15px;
   max-width: 1200px;
   margin: 150px auto;
   width: 98%;
@@ -695,16 +736,18 @@ p {
   border-radius: 10px;
   padding: 20px;
   margin: 30px;
+  background-color: #6e6b6b;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  box-shadow: 0px 0px 18px 0 #0000002c;
+  box-shadow: 0px 0px 5px 2.5px #ffffff;
   transition: 0.3s ease box-shadow;
 }
 
 #contact .contact-item:hover {
-  box-shadow: 0px 0px 5px 0 #0000002c;
+  box-shadow: 0px 0px 5px 0 #dad1d1;
 }
 
 #contact .icon {
@@ -770,6 +813,7 @@ p {
 /* footer Section */
 #footer {
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  
 }
 
 #footer .footer {
